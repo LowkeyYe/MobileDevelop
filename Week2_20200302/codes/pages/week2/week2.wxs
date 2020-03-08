@@ -1,0 +1,29 @@
+var calPagen = function (array) {
+  var num;
+  //num是页数
+  var total = array.length;
+  if (total % 3 == 0) {
+    num = total / 3;
+  }
+  else {
+    num = (total / 3 + 1).toFixed(0);
+  }
+  return num;
+}
+var judgeBt = function (pageN, nowN) {
+  pageN = parseInt(pageN);
+  nowN = parseInt(nowN);
+  var minN = pageN * 3;
+  var maxN = minN + 3;
+  if (minN <= nowN && nowN < maxN) {
+    return "display:block";
+  }
+  else {
+    return "display:none";
+  }
+}
+
+module.exports = {
+  calPagen: calPagen,
+  judgeBt: judgeBt,
+}
