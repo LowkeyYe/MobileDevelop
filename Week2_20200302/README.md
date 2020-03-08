@@ -23,4 +23,4 @@
 5. 由于目前水平限制，采用方法为button的display属性为变量，在wxs中计算判断，如果是本页应当显示的week按钮，则返回display:block；如果不应当显示，则返回display:none。
 （如果wx:for可以从第n项开始渲染应该会更简单）
 最后效果如下图所示：
-![效果展示](https://github.com/LowkeyYe/MobileDevelop/tree/master/Week2_20200302/imgs/效果图.jpg "效果展示")
+![效果展示](https://github.com/LowkeyYe/MobileDevelop/blob/master/Week2_20200302/imgs/效果图.jpg "效果展示")
