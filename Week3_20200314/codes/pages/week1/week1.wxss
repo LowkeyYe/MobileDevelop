@@ -1,0 +1,45 @@
+/* pages/week1/week1.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description {
+  margin-top: -80px;
+  margin-bottom: 20px;
+  width: 280px;
+  text-align: center;
+}
+
+.navbar {
+  margin:10px;
+  height: 40px;
+  width: 280px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.navbar .back {
+  height: 30px;
+  width: 60px;
+  font-size: 15px;
+  text-align: center;
+  line-height: 30px;
+  padding: 1px;
+}
+
+.album {
+  width:300px;
+  height:300px;
+  margin-top:10px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.album .swiper {
+  height: 280px;
+  width: 280px;
+}

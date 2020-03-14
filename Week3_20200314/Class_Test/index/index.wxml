@@ -1,0 +1,20 @@
+<view class="page-body">
+  <view class="page-body-wrapper">
+    <canvas canvas-id="canvas" class="canvas">
+      <cover-view class="cover-view">cover-view</cover-view>
+      <cover-view>
+        <cover-view class="cover-view" bindtap="tap1">cover-view</cover-view>
+      </cover-view>
+      <cover-view class="image-cnt">
+        <cover-image class="cover-image" bindtap="tap1" src="/image/location.png" />
+      </cover-view>
+    </canvas>
+  </view>
+  <view class="page-body-wrapper">
+    <movable-area style="height: 200px; width: 200px; background: green;">
+      <movable-view style="height: 50px; width: 50px; background: white;" x="{{x}}" y="{{y}}" direction="all">
+      </movable-view>
+    </movable-area>
+  </view>
+
+</view>
