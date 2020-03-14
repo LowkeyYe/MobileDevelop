@@ -1,0 +1,21 @@
+<!--pages/week2/week2.wxml-->
+<view class="container">
+  <view class="description">
+    <text>第二周作业 - 为首页目录按钮添加列表渲染</text>
+  </view>
+  <view class="navbar">
+    <view class="button_back">
+      <button class="back" bindtap="backToHome">Back</button>
+    </view>
+  </view>
+ <!-- 计算按钮的页数 -->
+<wxs src="./week2.wxs" module="test"/>
+  <swiper class="project-button" indicator-dots="true" indicator-color="rgb(221, 177, 177)" indicator-active-color="rgb(141, 118, 223)">
+    <swiper-item wx:for="{{test.calPagen(chapters)-0}}" wx:for-index="i" wx:key="this">
+      <button wx:for="{{chapters}}" wx:for-index="j" wx:key="week" class="{{'Week'+item.week+'_button'}}" bindtap="{{'gotoWeek'+item.week}}" disabled="{{item.block}}" style="{{test.judgeBt(i,j)}}">
+        Week{{item.week}} - {{item.theme}}
+      </button>
+    </swiper-item>
+   </swiper>
+</view>
+
