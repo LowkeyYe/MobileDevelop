@@ -1,0 +1,82 @@
+/* pages/week3/week3.wxss */
+
+/*主视图*/
+
+.mainViewClass {
+  width: 100%;
+}
+
+/*顶部分类栏目*/
+
+.topTabBarClass {
+  background-color: rgba(144, 211, 231, 0.726);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80rpx;
+}
+
+/*类型选择，默认样式*/
+
+.topTypeListClass {
+  display: inline-block;
+  margin-top: 12rpx;
+  margin-left: 10rpx;
+  font-size: 30rpx;
+  font-weight:700;
+  width: 100rpx;
+  height: 100%;
+  text-align: center;
+  z-index: 99;
+  color: rgb(66, 62, 40);
+}
+
+/*类型选择，选中样式*/
+
+.curpage {
+  animation-fill-mode: forwards;
+  color: antiquewhite;
+  font-size: 35rpx;
+}
+
+
+
+/*cell样式*/
+
+.cellClass {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20rpx;
+  background: white;
+  border-bottom: 1rpx solid darkgray;
+}
+
+/*评论时间栏目 样式*/
+
+.cellbottomClass {
+  width: 100%;
+  height: 44rpx;
+  background-color: transparent;
+  color: rgb(104, 138, 126);
+  font-size: 30rpx;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+}
+
+/*图片容器视图 样式*/
+
+.imageClass {
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  height: 150rpx;
+  background-color: transparent;
+  justify-content: space-around; /*用于设置或检索弹性盒子元素在主轴方向上的对齐方式*/
+}
+
+/*图片样式*/
+
+.imageshow {
+  width: 230rem;
+  height: 150rem;
+}

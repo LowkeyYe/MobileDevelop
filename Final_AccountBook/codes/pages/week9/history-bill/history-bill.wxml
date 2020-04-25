@@ -1,0 +1,12 @@
+<!--pages/week9/history-bill/history-bill.wxml-->
+<view wx:for="{{allRecords}}" wx:for-index="num">
+    <view class="line"></view>
+    <view class="ui-flex ui-p20">
+      <text class="item-remarks" style="font-size: 12px; padding-left: 0px; margin-right: 5px; line-height:2.5; ">{{item.date}}</text>
+      <image class="spend-way-icon" src="{{item.spendWayImg}}"></image>
+      <text class="item-remarks">{{item.spendWay}}</text>
+      <text class="item-remarks">{{item.remarks}}</text>
+      <text>￥{{item.spendMoney}}</text>
+      <button class="item-delete" bindtap="deleteBill" data-index="{{num}}">删除</button>
+    </view>
+</view>

@@ -1,0 +1,4 @@
+{
+  "usingComponents": {"mp-icon": "/weui-miniprogram/icon/icon"},
+  "navigationBarTitleText": "Week3 - News"
+}

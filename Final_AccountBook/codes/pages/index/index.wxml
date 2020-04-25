@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+<!-- 计算按钮的页数 -->
+<wxs src="./pagen.wxs" module="pagen"/>
+      <swiper class="project-button" indicator-dots="true" indicator-color="rgb(221, 177, 177)" indicator-active-color="rgb(141, 118, 223)">
+        <swiper-item wx:for="{{pagen.calPagen(chapters)-0}}" wx:for-index="i" wx:key="this">
+          <button wx:for="{{chapters}}" wx:for-index="j" wx:key="week" class="{{'Week'+item.week+'_button'}}" bindtap="{{'goto'+item.week}}" disabled="{{item.block}}" style="{{pagen.judgeBt(i,j)}}">
+            {{item.week}} - {{item.theme}}
+          </button>
+        </swiper-item>
+      </swiper>
+
+    </block>
+  </view>
+  <view class="{{hasUserInfo?'welcome':'load'}}">
+    <text class="usermotto">{{motto}}</text>
+  </view>
+</view>
