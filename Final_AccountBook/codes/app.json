@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/week1/week1",
+    "pages/week2/week2",
+    "pages/week3/week3",
+    "pages/week9/index/index",
+    "pages/week9/history-bill/history-bill",
+    "pages/week9/record-expend/record-expend"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Lowkey's Practice Project",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

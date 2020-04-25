@@ -1,0 +1,43 @@
+<!--pages/week3/week3.wxml-->
+<view class="mainViewClass">
+
+  
+  <!--顶部分栏项目-->
+  <view class="topTabBarClass">
+    <!--block模块通过wx：for读取tarray数组内容来创建view控件，animation绑定动画，bindtap绑定单击事件，data-idx绑定单击事件的参数。view组件显示的内容是item.name-->
+
+    <!--类型 滚动视图-->
+    <!--wx:循环播放-->
+    <scroll-view scroll-x="true" style="width:90%; height:100%;white-space:nowrap;display:flex">
+      <block wx:for="{{tArray}}">
+        <view animation="{{animation}}" class="topTypeListClass" bindtap="typeClick" id="{{index}}" data-idx="{{item.category}}">
+          {{item.name}}
+        </view>
+      </block>
+    </scroll-view>
+
+  </view>
+  <!-- 时间戳转时间 -->
+  <wxs src="./time.wxs" module="Time"/>
+  <!--新闻列表-->
+  <!--scroll-y="true":垂直滚动-->
+  <!--高度：viewHeight-->
+  <!--lower-threshold：距离底部50，调用addMoreData事件-->
+  <!--下拉到底部触发addData事件，加载更少-->
+  <scroll-view scroll-y="true" style="width:100%; height:{{viewHeight}}px" lower-threshold="50" bindscrolltolower="addMoreData">
+    <!--循环添加每一个cell内容-->
+    <block wx:for="{{detaildata}}">
+      <view class="cellClass">
+        <!--标题-->
+        <text>{{item.title}}</text>
+        <!--评论时间栏目-->
+        <view class="cellbottomClass">
+          <text style="margin-right:60rpx">{{item.comment_count}}条评论</text>
+          <text>{{Time.dateFormat(item.publish_time)}}</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+  <mp-icon icon="add" color="black" size="{{25}}"></mp-icon>
+
+</view>

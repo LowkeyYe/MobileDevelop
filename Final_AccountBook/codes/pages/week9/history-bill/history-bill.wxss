@@ -1,0 +1,21 @@
+/* pages/week9/history-bill/history-bill.wxss */
+.spend-way-icon{
+  width: 64rpx;
+  height: 64rpx;
+}
+.item-remarks{
+  flex: 1;
+  text-overflow: ellipsis;
+  padding-left: 10rpx;
+}
+
+.item-delete{
+  width: 110rpx;
+  height: 64rpx;
+  font-size: 14px;
+  line-height: 2.3;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 10px;
+
+}

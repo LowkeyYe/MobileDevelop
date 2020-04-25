@@ -1,0 +1,18 @@
+<!--pages/week1/week1.wxml-->
+<view class="container">
+  <view class="description">
+    <text>第一周作业 - 个人动态相册</text>
+  </view>
+  <view class="navbar">
+    <view class="button_back">
+      <button class="back" bindtap="backToHome">Back</button>
+    </view>
+  </view>
+  <view class="album">
+    <swiper class="swiper" autoplay="true" interval="2000">
+      <swiper-item wx:for="{{imgUrls}}">
+        <image src='{{item}}' mode='aspectFit' class='img' />
+      </swiper-item>
+    </swiper>
+  </view>
+</view>
